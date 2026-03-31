@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html lang="he">
 <head>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '934720149312042');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=934720149312042&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,126 +30,109 @@ body {
   margin:0;
   font-family:Arial;
   direction:rtl;
-  background:#fff;
+  background:#0b0b0b;
+  color:white;
 }
 
-/* HERO */
 .hero {
   height:100vh;
-  background:url("after1.jpg") center/cover no-repeat;
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
-  color:white;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(201,168,106,0.15), transparent),
+    radial-gradient(circle at 80% 80%, rgba(201,168,106,0.08), transparent),
+    #0b0b0b;
 }
 
-.overlay {
-  background:rgba(0,0,0,0.65);
-  padding:60px;
-  border-radius:25px;
-  animation:fadeIn 1.5s;
+.hero-content {
+  max-width:700px;
 }
 
-h1 {font-size:46px;}
-p {font-size:20px;}
+h1 {
+  font-size:48px;
+  margin-bottom:15px;
+}
 
-/* כפתור */
+p {
+  font-size:20px;
+  opacity:0.85;
+}
+
 .cta {
-  background:linear-gradient(135deg,#d6b77a,#a8894d);
-  color:white;
-  padding:16px 40px;
+  margin-top:25px;
+  display:inline-block;
+  padding:14px 40px;
   border-radius:50px;
   text-decoration:none;
-  font-size:20px;
-  display:inline-block;
-  margin-top:20px;
+  color:#c9a86a;
+  border:1px solid #c9a86a;
   transition:0.3s;
 }
 
 .cta:hover {
-  transform:scale(1.1);
+  background:#c9a86a;
+  color:black;
 }
 
-/* סליידר */
-.compare {
-  position:relative;
-  max-width:800px;
-  margin:60px auto;
-}
-
-.compare img {
-  width:100%;
-  display:block;
-}
-
-.after {
-  position:absolute;
-  top:0;
-  left:0;
-  width:50%;
-  overflow:hidden;
-}
-
-.slider {
-  position:absolute;
-  top:0;
-  left:50%;
-  width:4px;
-  height:100%;
-  background:white;
-  cursor:pointer;
-}
-
-/* המלצות */
-.reviews {
-  padding:60px 20px;
-  background:#f7f7f7;
+.section {
+  padding:80px 20px;
   text-align:center;
 }
 
-.review {
-  background:white;
-  margin:15px auto;
-  padding:20px;
-  border-radius:15px;
-  max-width:600px;
+.divider {
+  width:60px;
+  height:2px;
+  margin:20px auto;
+  background:linear-gradient(to right, transparent, #c9a86a, transparent);
 }
 
-/* וואטסאפ */
+.gallery {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+  max-width:900px;
+  margin:auto;
+}
+
+.gallery img {
+  width:100%;
+  border-radius:12px;
+}
+
 .whatsapp {
   position:fixed;
   bottom:20px;
   right:20px;
-  width:70px;
-  height:70px;
-  background:#25D366;
+  width:60px;
+  height:60px;
+  background:#111;
+  border:1px solid #c9a86a;
   border-radius:50%;
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:30px;
-  color:white;
+  color:#c9a86a;
   text-decoration:none;
-  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  font-size:24px;
 }
 
-/* הודעה קופצת */
-.popup {
+.phone {
   position:fixed;
-  bottom:100px;
+  bottom:90px;
   right:20px;
-  background:white;
-  padding:15px;
-  border-radius:10px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.2);
-  display:none;
-}
-
-/* אנימציה */
-@keyframes fadeIn {
-  from {opacity:0; transform:translateY(30px);}
-  to {opacity:1;}
+  width:60px;
+  height:60px;
+  background:#111;
+  border:1px solid #c9a86a;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#c9a86a;
+  text-decoration:none;
+  font-size:24px;
 }
 </style>
 </head>
@@ -139,74 +141,74 @@ p {font-size:20px;}
 
 <!-- HERO -->
 <div class="hero">
-  <div class="overlay">
+  <div class="hero-content">
 
     <h1>עבודות שליכט וקרניזים ברמה אחרת</h1>
 
     <p>
-    גימור יוקרתי • דיוק ללא פשרות • ליווי אישי
+    דיוק בפרטים הקטנים • תוצאה ברמה גבוהה • ליווי אישי עד הסוף
     </p>
 
-    <a href="https://wa.me/972502542545?text=שלום אני רוצה הצעת מחיר" class="cta">
-      לקבלת הצעת מחיר
+    <a href="https://wa.me/972502542545?text=שלום אני רוצה פרטים" class="cta">
+      שלחו הודעה וקבלו ליווי מקצועי
     </a>
 
   </div>
 </div>
 
-<!-- לפני אחרי סליידר -->
-<div class="compare">
+<!-- מי אנחנו -->
+<div class="section">
 
-  <img src="before1.jpg">
-  
-  <div class="after" id="after">
-    <img src="after1.jpg">
-  </div>
+<h2>מי אנחנו</h2>
+<div class="divider"></div>
 
-  <div class="slider" id="slider"></div>
+<p>
+עתיד קורן מתמחה בעבודות שליכט צבעוני וקרניזים דקורטיביים ברמת גימור גבוהה במיוחד  
+
+עם דגש על דיוק בפרטים הקטנים  
+תוצאה ברמה גבוהה ורמת גימור גבוהה באמת  
+
+אנחנו מלווים כל לקוח משלב התכנון ועד התוצאה הסופית  
+ונותנים מענה גם לאחר סיום העבודה  
+
+כל פרויקט מבוצע מתוך אחריות מקצועית אמיתית  
+ותשומת לב לכל פרט קטן  
+
+אצלנו זו לא עוד עבודה  
+זו רמת ביצוע אחרת  
+
+מי שמחפש תוצאה ברמה גבוהה באמת  
+מבין את ההבדל
+</p>
 
 </div>
 
-<!-- המלצות -->
-<div class="reviews">
+<!-- עבודות -->
+<div class="section">
 
-<h2>לקוחות ממליצים</h2>
+<h2>פרויקטים</h2>
+<div class="divider"></div>
 
-<div class="review">עברתי כמה בעלי מקצוע עד שהגעתי אליכם סוף סוף עבודה ברמה גבוהה</div>
-<div class="review">לא ציפיתי לתוצאה כזאת הבית נראה מושלם</div>
-<div class="review">שירות גם אחרי העבודה לכל שאלה</div>
-<div class="review">דיוק מטורף עבודה נקיה מאוד</div>
-<div class="review">אחרי אכזבות מצאתי מקצוענים אמיתיים</div>
-<div class="review">רמת גימור גבוהה מאוד</div>
-<div class="review">יחס אישי ושירות אמין</div>
+<div class="gallery">
+
+<img src="IMG_0001.PNG">
+<img src="IMG_0002.PNG">
+<img src="79c8f9a.jpg">
+<img src="EA96DABE.jpg">
+
+</div>
 
 </div>
 
 <!-- וואטסאפ -->
-<div class="popup" id="popup">
-רוצה הצעת מחיר מהירה? לחץ כאן 👇
-</div>
-
-<a href="https://wa.me/972502542545?text=שלום אני רוצה פרטים על שליכט" class="whatsapp">
-💬
+<a href="https://wa.me/972502542545?text=שלום אני רוצה פרטים" class="whatsapp">
+✉
 </a>
 
-<script>
-/* סליידר */
-let slider = document.getElementById("slider");
-let after = document.getElementById("after");
-
-slider.onmousemove = function(e) {
-  let x = e.clientX / window.innerWidth * 100;
-  after.style.width = x + "%";
-  slider.style.left = x + "%";
-}
-
-/* פופאפ */
-setTimeout(function(){
-  document.getElementById("popup").style.display="block";
-},3000);
-</script>
+<!-- טלפון -->
+<a href="tel:0500000000" class="phone">
+📞
+</a>
 
 </body>
 </html>
