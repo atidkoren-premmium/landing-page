@@ -43,23 +43,16 @@ body {
     text-align: center;
 }
 
-.hero h1 {
-    font-size: 44px;
-}
-
-.hero p {
-    margin: 20px 0;
-    font-size: 18px;
-}
+.hero h1 { font-size: 44px; }
+.hero p { margin: 20px 0; }
 
 /* כפתור */
 .btn {
     padding: 15px 40px;
     border: 2px solid #d4af37;
     color: #d4af37;
-    text-decoration: none;
     border-radius: 40px;
-    font-size: 18px;
+    cursor: pointer;
     transition: 0.3s;
 }
 
@@ -68,36 +61,21 @@ body {
     color: black;
 }
 
-/* גלריה */
-.gallery {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.gallery h2 {
-    margin-bottom: 40px;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-    gap: 20px;
-}
-
-.card {
-    overflow: hidden;
+/* טופס */
+.form-box {
+    background: #111;
+    padding: 30px;
     border-radius: 10px;
+    max-width: 400px;
+    margin: 40px auto;
 }
 
-.card img {
+input {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
-    transition: 0.4s;
-}
-
-.card:hover img {
-    transform: scale(1.1);
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 6px;
 }
 </style>
 </head>
@@ -110,48 +88,47 @@ body {
         <h1>עבודות שליכט וקרניזים ברמה אחרת</h1>
         <p>דיוק בפרטים הקטנים • גימור יוקרתי • תוצאה שלא מתפשרת</p>
 
-        <a class="btn" 
-        href="https://wa.me/972XXXXXXXXX"
-        onclick="fbq('track', 'Contact');">
-        דברו איתנו עכשיו ותראו את ההבדל
-        </a>
+        <button class="btn" onclick="scrollToForm()">
+            דברו איתנו עכשיו ותראו את ההבדל
+        </button>
     </div>
 </section>
 
-<!-- גלריה -->
-<section class="gallery">
-    <h2>פרויקטים נבחרים</h2>
+<!-- טופס -->
+<div class="form-box" id="form">
 
-    <div class="grid">
-        <div class="card">
-            <img src="IMG_0001.PNG">
-        </div>
+<h2>השאירו פרטים</h2>
 
-        <div class="card">
-            <img src="IMG_0002.PNG">
-        </div>
+<form id="leadForm" action="https://formspree.io/f/XXXXXXX" method="POST">
 
-        <div class="card">
-            <img src="IMG_0001.PNG">
-        </div>
+<input type="text" name="name" placeholder="שם" required>
+<input type="tel" name="phone" placeholder="טלפון" required>
 
-        <div class="card">
-            <img src="IMG_0002.PNG">
-        </div>
-    </div>
-</section>
+<button class="btn" type="submit">שלחו וקבלו הצעת מחיר</button>
 
-<!-- מעקב גלילה -->
+</form>
+
+</div>
+
 <script>
-let scrollTracked = false;
+function scrollToForm(){
+    document.getElementById("form").scrollIntoView({behavior:"smooth"});
+}
 
-window.addEventListener("scroll", function() {
-    let scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+// אחרי שליחה
+document.getElementById("leadForm").addEventListener("submit", function(){
 
-    if(scrollPercent > 50 && !scrollTracked){
-        fbq('track', 'ViewContent');
-        scrollTracked = true;
-    }
+    // פיקסל ליד
+    fbq('track', 'Lead');
+
+    // לקחת נתונים
+    let name = document.querySelector("input[name='name']").value;
+    let phone = document.querySelector("input[name='phone']").value;
+
+    // שליחה לוואטסאפ
+    let message = "שם: " + name + " טלפון: " + phone;
+    window.open("https://wa.me/972502542545?text=" + encodeURIComponent(message));
+
 });
 </script>
 
