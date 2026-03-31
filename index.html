@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>עתיד קורן - שליכט וקרניזים</title>
+<title>עתיד קורן</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700;900&display=swap" rel="stylesheet">
 
 <!-- PIXEL -->
 <script>
@@ -28,80 +28,105 @@ body{
 margin:0;
 font-family:'Heebo',sans-serif;
 direction:rtl;
-background:#f7f7f7;
-color:#222;
+background:#0a0a0a;
+color:white;
 }
 
-/* HERO */
+/* HERO WOW */
 .hero{
-padding:100px 20px;
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
 text-align:center;
-background:white;
+padding:20px;
+
+background:
+radial-gradient(circle at 30% 20%, rgba(255,255,255,0.08), transparent),
+radial-gradient(circle at 80% 80%, rgba(255,255,255,0.05), transparent),
+linear-gradient(180deg,#111,#000);
 }
 
 .hero h1{
-font-size:42px;
-font-weight:700;
-margin-bottom:10px;
+font-size:48px;
+font-weight:900;
+margin-bottom:20px;
 }
 
 .hero p{
-color:#666;
 font-size:18px;
-margin-bottom:30px;
+opacity:0.8;
+margin-bottom:40px;
 }
 
+/* BUTTON WOW */
 .btn{
-padding:14px 35px;
-border-radius:30px;
-background:#111;
-color:white;
+display:inline-block;
+padding:16px 45px;
+border-radius:50px;
+background:white;
+color:black;
+font-weight:600;
 text-decoration:none;
-font-size:16px;
+transition:0.3s;
 }
 
-/* SECTION */
+.btn:hover{
+transform:scale(1.05);
+}
+
+/* CARDS */
 .section{
-padding:70px 20px;
-max-width:1000px;
+padding:80px 20px;
+max-width:1100px;
 margin:auto;
 }
 
-.section h2{
-font-size:26px;
-margin-bottom:15px;
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:40px;
 }
 
-.section p{
-line-height:1.8;
-color:#555;
-margin-bottom:15px;
+.card{
+background:#111;
+padding:25px;
+border-radius:15px;
+border:1px solid rgba(255,255,255,0.05);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
 }
 
 /* FORM */
 .form-box{
-background:white;
+background:#111;
 padding:35px;
-border-radius:10px;
-box-shadow:0 10px 30px rgba(0,0,0,0.05);
+border-radius:15px;
+margin-top:40px;
 }
 
 input{
 width:100%;
 padding:14px;
 margin-bottom:15px;
-border:1px solid #ddd;
-border-radius:6px;
+border:none;
+border-radius:8px;
+background:#222;
+color:white;
 }
 
 button{
 width:100%;
 padding:15px;
-background:#111;
-color:white;
+background:white;
+color:black;
 border:none;
-border-radius:6px;
-font-size:16px;
+border-radius:8px;
+font-weight:600;
 cursor:pointer;
 }
 </style>
@@ -109,87 +134,79 @@ cursor:pointer;
 
 <body>
 
+<!-- HERO -->
 <section class="hero">
+<div>
 <h1>עתיד קורן – עבודות שליכט וקרניזים ברמה אחרת</h1>
-<p>דיוק בפרטים הקטנים, עבודה נקייה ותוצאה יוקרתית שמחזיקה לאורך שנים</p>
-
-<a href="#form" class="btn">קבלו הצעת מחיר</a>
-</section>
-
-<section class="section">
-<h2>מה זה שליכט צבעוני?</h2>
 
 <p>
-שליכט צבעוני הוא חומר גמר דקורטיבי המשמש לציפוי קירות חוץ ופנים.
-הוא מעניק לקיר מראה יוקרתי, אחיד ומודרני, תוך שמירה על עמידות גבוהה
-לתנאי מזג אוויר, רטיבות ושחיקה לאורך זמן.
+דיוק בפרטים הקטנים • עבודה נקייה • תוצאה שמחזיקה לאורך שנים
 </p>
 
-<p>
-העבודה עם שליכט דורשת דיוק רב – החל משלב הכנת הקיר,
-דרך יישום נכון של החומר ועד הגימור הסופי.
-ביצוע מקצועי הוא מה שעושה את ההבדל בין קיר רגיל לבין תוצאה מושלמת.
+<a href="#form" class="btn">
+השאירו פרטים ונחזור אליכם עם פתרון מדויק
+</a>
+
+<p style="opacity:0.5; margin-top:10px;">
+ללא התחייבות • מענה מהיר
 </p>
-</section>
-
-<section class="section">
-<h2>קרניזים דקורטיביים – למה זה חשוב?</h2>
-
-<p>
-קרניזים מוסיפים עומק, יוקרה וגימור מדויק לכל מבנה.
-הם יוצרים מעבר חלק בין קירות לתקרה ומשדרגים את המראה הכללי של הבית.
-</p>
-
-<p>
-כאשר העבודה מתבצעת בצורה מקצועית, הקרניזים משתלבים בצורה טבעית
-עם הקיר ומעניקים תחושה של בנייה איכותית ומוקפדת.
-</p>
-</section>
-
-<section class="section">
-<h2>איך מתבצעת עבודה מקצועית?</h2>
-
-<p>
-✔ הכנה יסודית של הקיר  
-✔ יישום מדויק ואחיד של החומר  
-✔ עבודה נקייה ללא סימנים  
-✔ גימור חלק ואסתטי  
-</p>
-
-<p>
-אנחנו מקפידים על כל שלב בתהליך כדי להבטיח תוצאה ברמה הגבוהה ביותר.
-</p>
-</section>
-
-<section class="section">
-<h2>השאירו פרטים לקבלת הצעת מחיר</h2>
-
-<div class="form-box" id="form">
-
-<form id="leadForm" action="https://formspree.io/f/XXXXXXX" method="POST">
-
-<input type="text" name="name" placeholder="שם מלא" required>
-<input type="tel" name="phone" placeholder="טלפון" required>
-
-<button type="submit">שלחו וקבלו הצעת מחיר</button>
-
-</form>
 
 </div>
 </section>
 
+<!-- VALUE -->
+<section class="section">
+<h2>למה לבחור בנו</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>דיוק בפרטים</h3>
+<p>עבודה מדויקת שמביאה תוצאה ברמה גבוהה באמת</p>
+</div>
+
+<div class="card">
+<h3>עמידות לאורך זמן</h3>
+<p>שימוש בחומרים נכונים וגימור שמחזיק שנים</p>
+</div>
+
+<div class="card">
+<h3>עבודה נקייה</h3>
+<p>ביצוע מקצועי ללא לכלוך וללא פשרות</p>
+</div>
+
+</div>
+</section>
+
+<!-- FORM -->
+<section class="section">
+
+<h2>השאירו פרטים</h2>
+
+<div class="form-box" id="form">
+
+<form id="leadForm">
+
+<input type="text" placeholder="שם מלא" required>
+<input type="tel" placeholder="טלפון" required>
+
+<button type="submit">
+שלחו ונחזור אליכם
+</button>
+
+</form>
+
+</div>
+
+</section>
+
 <script>
-document.getElementById("leadForm").addEventListener("submit", function(){
+document.getElementById("leadForm").addEventListener("submit", function(e){
+e.preventDefault();
 
 fbq('track','Lead');
 
-let name = document.querySelector("input[name='name']").value;
-let phone = document.querySelector("input[name='phone']").value;
-
-let message = "שם: " + name + " טלפון: " + phone;
-
-window.open("https://wa.me/972502542545?text=" + encodeURIComponent(message));
-
+window.open("https://wa.me/972502542545");
 });
 </script>
 
