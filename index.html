@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="he">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Meta Pixel Code -->
+<title>עתיד קורן שליכט</title>
+
+<!-- Meta Pixel -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -12,127 +16,88 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
+
 fbq('init', '934720149312042');
 fbq('track', 'PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=934720149312042&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>עתיד קורן פרימיום</title>
 
 <style>
 body {
-  margin:0;
-  font-family:Arial;
-  direction:rtl;
-  background:#0b0b0b;
-  color:white;
+    margin: 0;
+    font-family: Arial;
+    direction: rtl;
+    background: #0d0d0d;
+    color: white;
 }
 
+/* HERO */
 .hero {
-  height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  background:
-    radial-gradient(circle at 30% 20%, rgba(201,168,106,0.15), transparent),
-    radial-gradient(circle at 80% 80%, rgba(201,168,106,0.08), transparent),
-    #0b0b0b;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url('https://images.unsplash.com/photo-1600607687644-c7171b42498b');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-.hero-content {
-  max-width:700px;
+.hero h1 {
+    font-size: 44px;
 }
 
-h1 {
-  font-size:48px;
-  margin-bottom:15px;
+.hero p {
+    margin: 20px 0;
+    font-size: 18px;
 }
 
-p {
-  font-size:20px;
-  opacity:0.85;
+/* כפתור */
+.btn {
+    padding: 15px 40px;
+    border: 2px solid #d4af37;
+    color: #d4af37;
+    text-decoration: none;
+    border-radius: 40px;
+    font-size: 18px;
+    transition: 0.3s;
 }
 
-.cta {
-  margin-top:25px;
-  display:inline-block;
-  padding:14px 40px;
-  border-radius:50px;
-  text-decoration:none;
-  color:#c9a86a;
-  border:1px solid #c9a86a;
-  transition:0.3s;
+.btn:hover {
+    background: #d4af37;
+    color: black;
 }
 
-.cta:hover {
-  background:#c9a86a;
-  color:black;
-}
-
-.section {
-  padding:80px 20px;
-  text-align:center;
-}
-
-.divider {
-  width:60px;
-  height:2px;
-  margin:20px auto;
-  background:linear-gradient(to right, transparent, #c9a86a, transparent);
-}
-
+/* גלריה */
 .gallery {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:15px;
-  max-width:900px;
-  margin:auto;
+    padding: 60px 20px;
+    text-align: center;
 }
 
-.gallery img {
-  width:100%;
-  border-radius:12px;
+.gallery h2 {
+    margin-bottom: 40px;
 }
 
-.whatsapp {
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  width:60px;
-  height:60px;
-  background:#111;
-  border:1px solid #c9a86a;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#c9a86a;
-  text-decoration:none;
-  font-size:24px;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 20px;
 }
 
-.phone {
-  position:fixed;
-  bottom:90px;
-  right:20px;
-  width:60px;
-  height:60px;
-  background:#111;
-  border:1px solid #c9a86a;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#c9a86a;
-  text-decoration:none;
-  font-size:24px;
+.card {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.card:hover img {
+    transform: scale(1.1);
 }
 </style>
 </head>
@@ -140,75 +105,55 @@ p {
 <body>
 
 <!-- HERO -->
-<div class="hero">
-  <div class="hero-content">
+<section class="hero">
+    <div>
+        <h1>עבודות שליכט וקרניזים ברמה אחרת</h1>
+        <p>דיוק בפרטים הקטנים • גימור יוקרתי • תוצאה שלא מתפשרת</p>
 
-    <h1>עבודות שליכט וקרניזים ברמה אחרת</h1>
+        <a class="btn" 
+        href="https://wa.me/972XXXXXXXXX"
+        onclick="fbq('track', 'Contact');">
+        דברו איתנו עכשיו ותראו את ההבדל
+        </a>
+    </div>
+</section>
 
-    <p>
-    דיוק בפרטים הקטנים • תוצאה ברמה גבוהה • ליווי אישי עד הסוף
-    </p>
+<!-- גלריה -->
+<section class="gallery">
+    <h2>פרויקטים נבחרים</h2>
 
-    <a href="https://wa.me/972502542545?text=שלום אני רוצה פרטים" class="cta">
-      שלחו הודעה וקבלו ליווי מקצועי
-    </a>
+    <div class="grid">
+        <div class="card">
+            <img src="IMG_0001.PNG">
+        </div>
 
-  </div>
-</div>
+        <div class="card">
+            <img src="IMG_0002.PNG">
+        </div>
 
-<!-- מי אנחנו -->
-<div class="section">
+        <div class="card">
+            <img src="IMG_0001.PNG">
+        </div>
 
-<h2>מי אנחנו</h2>
-<div class="divider"></div>
+        <div class="card">
+            <img src="IMG_0002.PNG">
+        </div>
+    </div>
+</section>
 
-<p>
-עתיד קורן מתמחה בעבודות שליכט צבעוני וקרניזים דקורטיביים ברמת גימור גבוהה במיוחד  
+<!-- מעקב גלילה -->
+<script>
+let scrollTracked = false;
 
-עם דגש על דיוק בפרטים הקטנים  
-תוצאה ברמה גבוהה ורמת גימור גבוהה באמת  
+window.addEventListener("scroll", function() {
+    let scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
 
-אנחנו מלווים כל לקוח משלב התכנון ועד התוצאה הסופית  
-ונותנים מענה גם לאחר סיום העבודה  
-
-כל פרויקט מבוצע מתוך אחריות מקצועית אמיתית  
-ותשומת לב לכל פרט קטן  
-
-אצלנו זו לא עוד עבודה  
-זו רמת ביצוע אחרת  
-
-מי שמחפש תוצאה ברמה גבוהה באמת  
-מבין את ההבדל
-</p>
-
-</div>
-
-<!-- עבודות -->
-<div class="section">
-
-<h2>פרויקטים</h2>
-<div class="divider"></div>
-
-<div class="gallery">
-
-<img src="IMG_0001.PNG">
-<img src="IMG_0002.PNG">
-<img src="79c8f9a.jpg">
-<img src="EA96DABE.jpg">
-
-</div>
-
-</div>
-
-<!-- וואטסאפ -->
-<a href="https://wa.me/972502542545?text=שלום אני רוצה פרטים" class="whatsapp">
-✉
-</a>
-
-<!-- טלפון -->
-<a href="tel:0500000000" class="phone">
-📞
-</a>
+    if(scrollPercent > 50 && !scrollTracked){
+        fbq('track', 'ViewContent');
+        scrollTracked = true;
+    }
+});
+</script>
 
 </body>
 </html>
